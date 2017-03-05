@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * Created by ivan on 3/4/17.
@@ -14,11 +17,11 @@ import android.widget.TextView;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
-    private String[] mData = new String[0];
+    private List<String> mData = new ArrayList<>();
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    public MyRecyclerViewAdapter(Context context, String[] data) {
+    public MyRecyclerViewAdapter(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -32,13 +35,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String animal = mData[position];
+        String animal = mData.get(position);
         holder.myTextView.setText(animal);
     }
 
     @Override
     public int getItemCount() {
-        return mData.length;
+        return mData.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -58,7 +61,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     // convenience method for getting data at click position
     public String getItem(int id) {
-        return mData[id];
+        return mData.get(id);
     }
 
     // allows clicks events to be caught

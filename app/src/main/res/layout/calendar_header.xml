@@ -24,6 +24,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day1"] }' />
 
         <TextView
@@ -33,6 +35,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day2"] }' />
 
         <TextView
@@ -42,6 +46,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day3"] }' />
 
         <TextView
@@ -51,6 +57,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day4"] }' />
 
         <TextView
@@ -60,6 +68,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day5"] }' />
 
         <TextView
@@ -69,6 +79,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day6"] }' />
 
         <TextView
@@ -78,6 +90,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day7"] }' />
 
     </LinearLayout>
