@@ -22,7 +22,6 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView,
         binding = DataBindingUtil.setContentView(this, R.layout.activity_calendar);
         viewModel = new CalendarViewModel(this);
         binding.setViewModel(viewModel);
-        viewModel.setCalendarHeader(binding.calendarHeader);
 
         String[] data = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
                 "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28",
@@ -47,5 +46,10 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView,
     @Override
     public void onItemClick(View view, int position) {
         Log.i("ASD", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
+    }
+
+    @Override
+    public String[] getStringArray(int resId) {
+        return getResources().getStringArray(resId);
     }
 }

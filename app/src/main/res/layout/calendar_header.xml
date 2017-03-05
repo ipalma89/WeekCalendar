@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day1" />
+            android:text='@{ viewModel.daysHeader["day1"] }' />
 
         <TextView
             android:id="@+id/day2"
@@ -33,7 +33,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day2" />
+            android:text='@{ viewModel.daysHeader["day2"] }' />
 
         <TextView
             android:id="@+id/day3"
@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day3" />
+            android:text='@{ viewModel.daysHeader["day3"] }' />
 
         <TextView
             android:id="@+id/day4"
@@ -51,7 +51,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day4" />
+            android:text='@{ viewModel.daysHeader["day4"] }' />
 
         <TextView
             android:id="@+id/day5"
@@ -60,7 +60,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day5" />
+            android:text='@{ viewModel.daysHeader["day5"] }' />
 
         <TextView
             android:id="@+id/day6"
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day6" />
+            android:text='@{ viewModel.daysHeader["day6"] }' />
 
         <TextView
             android:id="@+id/day7"
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/border_red"
-            android:text="@string/day7" />
+            android:text='@{ viewModel.daysHeader["day7"] }' />
 
     </LinearLayout>
 </layout>

@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">WeekCalendar</string>
 
-    <string name="day1">L %s</string>
-    <string name="day2">M %s</string>
-    <string name="day3">M %s</string>
-    <string name="day4">J %s</string>
-    <string name="day5">V %s</string>
-    <string name="day6">S %s</string>
-    <string name="day7">D %s</string>
+    <string-array name="days_array">
+        <item>L\n%s</item>
+        <item>M\n%s</item>
+        <item>M\n%s</item>
+        <item>J\n%s</item>
+        <item>V\n%s</item>
+        <item>S\n%s</item>
+        <item>D\n%s</item>
+    </string-array>
+
 </resources>

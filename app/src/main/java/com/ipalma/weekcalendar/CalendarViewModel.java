@@ -1,14 +1,18 @@
 package com.ipalma.weekcalendar;
 
 
-import com.ipalma.weekcalendar.databinding.CalendarHeaderBinding;
+import android.databinding.ObservableArrayMap;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class CalendarViewModel {
 
+    public ObservableArrayMap<String, String> daysHeader = new ObservableArrayMap<>();
+
     private CalendarView view;
-    private int currentWeek;
+    private Calendar currentWeek;
 
     public CalendarViewModel(CalendarView view) {
         this.view = view;
@@ -16,28 +20,33 @@ public class CalendarViewModel {
     }
 
     private void init() {
+        initCalendar();
+        setCalendarHeader();
+    }
 
+    private void initCalendar() {
+        currentWeek = Calendar.getInstance();
+        currentWeek.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
     }
 
     public void showNextWeek() {
-        currentWeek += 7;
-        Calendar nextWeek = Calendar.getInstance();
-        nextWeek.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-        nextWeek.add(Calendar.DAY_OF_MONTH, currentWeek);
-//        weekView.goToDate(nextWeek);
+        currentWeek.add(Calendar.DAY_OF_MONTH, 7);
+        setCalendarHeader();
     }
 
     public void showPreviousWeek() {
-        currentWeek -= 7;
-        Calendar previousWeek = Calendar.getInstance();
-        previousWeek.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-        previousWeek.add(Calendar.DAY_OF_MONTH, currentWeek);
-//        weekView.goToDate(previousWeek);
+        currentWeek.add(Calendar.DAY_OF_MONTH, -7);
+        setCalendarHeader();
     }
 
-    public void setCalendarHeader(CalendarHeaderBinding calendarHeader) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-        
+    private void setCalendarHeader() {
+        Calendar week = (Calendar) currentWeek.clone();
+        String[] days = view.getStringArray(R.array.days_array);
+        SimpleDateFormat sdf = new SimpleDateFormat("d/M", Locale.getDefault());
+
+        for (int i = 1; i <= 7; i++) {
+            daysHeader.put("day" + i, String.format(days[i-1], sdf.format(week.getTime())));
+            week.add(Calendar.DAY_OF_WEEK, 1);
+        }
     }
 }
