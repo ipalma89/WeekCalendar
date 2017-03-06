@@ -18,16 +18,14 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_calendar);
-        viewModel = new CalendarViewModel(this);
-        binding.setViewModel(viewModel);
 
-        // set up the RecyclerView
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.calendar);
-        int numberOfColumns = 8;
-        recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
+        binding.calendarRecyclerView.setLayoutManager(new GridLayoutManager(this, 8));
         adapter = new MyRecyclerViewAdapter(this, WeekCalendarUtils.getCurrentWeekFields());
         adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
+        binding.calendarRecyclerView.setAdapter(adapter);
+
+        viewModel = new CalendarViewModel(this);
+        binding.setViewModel(viewModel);
     }
 
     @Override

@@ -24,7 +24,7 @@
                 bind:viewModel="@{ viewModel }" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/calendar"
+                android:id="@+id/calendar_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -36,7 +36,7 @@
             android:layout_margin="16dp"
             app:backgroundTint="@color/rappi_red"
             app:srcCompat="@drawable/ic_chevron_left_24dp"
-            app:layout_anchor="@id/calendar"
+            app:layout_anchor="@id/calendar_recycler_view"
             app:layout_anchorGravity="bottom|left|end"
             app:layout_behavior="com.ipalma.weekcalendar.FABScrollBehavior"
             android:onClick="@{ () -> viewModel.showPreviousWeek() }" />
@@ -48,7 +48,7 @@
             android:layout_margin="16dp"
             app:backgroundTint="@color/rappi_red"
             app:srcCompat="@drawable/ic_chevron_right_24dp"
-            app:layout_anchor="@id/calendar"
+            app:layout_anchor="@id/calendar_recycler_view"
             app:layout_anchorGravity="bottom|right|end"
             app:layout_behavior="com.ipalma.weekcalendar.FABScrollBehavior"
             android:onClick="@{ () -> viewModel.showNextWeek() }" />
