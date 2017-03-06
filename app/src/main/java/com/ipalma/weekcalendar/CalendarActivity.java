@@ -5,12 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
 
 import com.ipalma.weekcalendar.databinding.ActivityCalendarBinding;
 
-public class CalendarActivity extends AppCompatActivity implements CalendarView, MyRecyclerViewAdapter.ItemClickListener {
+public class CalendarActivity extends AppCompatActivity implements CalendarView {
 
     private ActivityCalendarBinding binding;
     private CalendarViewModel viewModel;
@@ -33,8 +31,8 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView,
     }
 
     @Override
-    public void onItemClick(View view, int position) {
-        Log.i("ASD", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
+    public void onItemClick() {
+//        Log.i("ASD", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
     }
 
     @Override

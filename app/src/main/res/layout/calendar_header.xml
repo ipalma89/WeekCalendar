@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day1"] }' />
@@ -34,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day2"] }' />
@@ -45,7 +43,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day3"] }' />
@@ -56,7 +53,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day4"] }' />
@@ -67,7 +63,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day5"] }' />
@@ -78,7 +73,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day6"] }' />
@@ -89,7 +83,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/border_red"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text='@{ viewModel.daysHeader["day7"] }' />
