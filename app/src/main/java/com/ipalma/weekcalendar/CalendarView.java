@@ -9,5 +9,5 @@ public interface CalendarView {
 
     String[] getStringArray(int resId);
 
-    void onItemClick();
+    void onItemClick(int id);
 }

@@ -21,10 +21,10 @@ public class WeekCalendarUtils {
 
         for (int i = 0; i < 384; i++) {
             if (i % 8 == 0) {
-                calendarFields.add(new CalendarItem(sdf.format(hour.getTime())));
+                calendarFields.add(new CalendarItem(i, sdf.format(hour.getTime())));
                 hour.add(Calendar.MINUTE, 30);
             } else {
-                calendarFields.add(new CalendarItem());
+                calendarFields.add(new CalendarItem(i));
             }
         }
 

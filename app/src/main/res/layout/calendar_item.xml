@@ -9,7 +9,8 @@
         android:orientation="horizontal"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@{ calendarItem.isFirstRow ? @drawable/background_white : @drawable/border_black }">
+        android:background="@{ calendarItem.isFirstRow ? @drawable/background_white : @drawable/border_black }"
+        android:onClick="@{ () -> calendarItem.onItemClick() }" >
 
         <TextView
             android:id="@+id/info_text"

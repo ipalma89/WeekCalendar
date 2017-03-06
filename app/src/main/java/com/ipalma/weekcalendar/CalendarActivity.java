@@ -4,7 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.ipalma.weekcalendar.databinding.ActivityCalendarBinding;
 
@@ -29,8 +29,9 @@ public class CalendarActivity extends AppCompatActivity implements CalendarView 
     }
 
     @Override
-    public void onItemClick() {
+    public void onItemClick(int id) {
 //        Log.i("ASD", "You clicked number " + adapter.getItem(position) + ", which is at cell position " + position);
+        Toast.makeText(this, "Item: " + id, Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -35,7 +35,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<CalendarItemView
     @Override
     public void onBindViewHolder(CalendarItemViewHolder holder, int position) {
         CalendarItem item = mData.get(position);
-        holder.bind(item);
+        holder.bind(item, clickListener);
     }
 
     @Override
@@ -43,12 +43,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<CalendarItemView
         return mData.size();
     }
 
-    // convenience method for getting data at click position
-    public CalendarItem getItem(int id) {
-        return mData.get(id);
-    }
-
-    // allows clicks events to be caught
     public void setClickListener(CalendarView itemClickListener) {
         clickListener = itemClickListener;
     }
