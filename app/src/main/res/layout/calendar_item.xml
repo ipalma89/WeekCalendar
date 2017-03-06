@@ -9,14 +9,16 @@
         android:orientation="horizontal"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/border_black">
+        android:background="@{ calendarItem.isFirstRow ? @drawable/background_white : @drawable/border_black }">
 
         <TextView
             android:id="@+id/info_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@{ calendarItem.event }"/>
+            android:gravity="top|center_horizontal"
+            android:textColor="@android:color/black"
+            android:text="@{ calendarItem.text }"
+            android:background="@{ calendarItem.color }" />
 
     </LinearLayout>
 </layout>
